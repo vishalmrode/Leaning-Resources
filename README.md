@@ -6,7 +6,7 @@ By exploring this repo, you’ll have access to a wide range of tutorials, guide
 
 Leveraging these resources will not only improve your technical proficiency but also empower you to build real-world applications, streamline your development workflows, and stay ahead of the curve in the ever-evolving tech landscape.
 
-# design-patterns
+# Design-patterns
 
 JavaScript(Vanilla/ES6/TypeScript) and Java (GoF) design patterns
 
