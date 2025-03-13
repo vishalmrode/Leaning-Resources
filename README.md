@@ -1,4 +1,4 @@
-# Leaning-Resources
+# Leaning-Resources-JS
 
 This repository contains valuable learning materials sourced from the public domain, designed to help you deepen your understanding of various topics in web development and automation. The resources included are freely available and have been curated to provide a comprehensive foundation for learners at all levels.
 
