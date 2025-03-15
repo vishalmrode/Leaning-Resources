@@ -12062,6 +12062,4 @@ If a function is called with `undefined`, the `undefined` value is treated as a 
 </p>
 </details>
 
-**[⬆ Back to Top](#table-of-contents)**
-
 ---
