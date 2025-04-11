@@ -1,38 +1,24 @@
-function getEvenNumber(num) {
+function getEvenNumber(num, delay) {
   return new Promise((resolve, reject) => {
-    if (num % 2 === 0) {
-      resolve(num);
-    } else {
-      reject(new Error(`${num} is not an even number`));
-    }
-  }, delay);
-}
-
-function doubleNumber(num) {
-  return new Promise((resolve) => {
-    resolve(num * 2);
-  });
-}
-
-function addTen(num) {
-  return new Promise((resolve) => {
-    resolve(num + 10);
+    setTimeout(() => {
+      if (num % 2 === 0) {
+        resolve(num);
+      } else {
+        reject(new Error("Number is not even"));
+      }
+    }, delay);
   });
 }
 
 // Promise chaining
 getEvenNumber(4, 1000)
-  .then((evenNum) => {
-    console.log(`Even number: ${evenNum}`);
-    return doubleNumber(evenNum);
+  .then((result) => {
+    console.log("Step1: getting the result with even number", result);
+    return getEvenNumber(7, 2000);
   })
-  .then((doubledNum) => {
-    console.log(`Doubled number: ${doubledNum}`);
-    return addTen(doubledNum);
-  })
-  .then((finalResult) => {
-    console.log(`Final result after adding 10: ${finalResult}`);
+  .then((result) => {
+    console.log("Step2: getting the result with even number", result);
   })
   .catch((error) => {
-    console.error(error.message);
+    console.error("Promise chain error:", error.message);
   });
