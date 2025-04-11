@@ -25,3 +25,32 @@ function displayMessage(mesg) {
 }
 
 printInfo("Vishal", displayMessage); // Calling the main function with a callback
+
+// Callback with userData /////////////
+function getUserData(userId, callback) {
+  setTimeout(function () {
+    const users = [
+      { id: 1, name: "Vishal" },
+      { id: 2, name: "Amit" },
+      { id: 3, name: "Ravi" },
+    ];
+
+    const user = users[userId];
+    if (user) {
+      callback(null, user); // Call the callback with user data
+    } else {
+      callback("User not found", null); // Call the callback with an error message
+    }
+  }, 2000); // Simulate a delay of 2 seconds
+}
+
+function handleUserData(error, user) {
+  if (error) {
+    console.error("Error fetching user data:", error);
+  } else {
+    console.info("User data:", user); // Handle the user data here
+  }
+}
+
+getUserData(1, handleUserData); // Call the function with a user ID and a callback
+getUserData(5, handleUserData);
